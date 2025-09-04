@@ -12,7 +12,11 @@ import {
   Name,
   Quote,
   Text,
+  ArrowLeft,
+  ArrowRight,
 } from "./Testimonials.styles";
+
+import { TbArrowBigLeftLinesFilled, TbArrowBigRightLinesFilled } from "react-icons/tb";
 
 // ✅ Import images once, then reuse
 import profile1 from "../assets/profile1.png";
@@ -134,6 +138,11 @@ const Testimonials = () => {
           helped them take the next step toward their dreams.
         </SubHeading>
 
+        {/* ✅ Left Arrow */}
+        <ArrowLeft onClick={() => setCenterIndex((i) => mod(i - 1, total))}>
+          <TbArrowBigLeftLinesFilled size={44} />
+        </ArrowLeft>
+
         <Rail aria-live="polite">
           {visible.map((t, i) => {
             const isCenter = i === 1;
@@ -164,6 +173,11 @@ const Testimonials = () => {
             );
           })}
         </Rail>
+
+        {/* ✅ Right Arrow */}
+        <ArrowRight onClick={() => setCenterIndex((i) => mod(i + 1, total))}>
+          <TbArrowBigRightLinesFilled size={44} />
+        </ArrowRight>
       </Inner>
     </Section>
   );
