@@ -24,10 +24,12 @@ const Navbar = () => {
           <NavLinks>
             <NavLink href="#why-french">Why French</NavLink>
             <NavLink href="#why-bravo">Why Bravo Education</NavLink>
-            <NavLink href="#our-program">Our program</NavLink>
+            <NavLink href="#our-programs">Our Program</NavLink>
           </NavLinks>
 
-          <EnquiryButton>Enquiry</EnquiryButton>
+          <EnquiryButton as="a" href="#enquiry">
+            Enquiry
+          </EnquiryButton>
         </NavContent>
       </NavBox>
     </NavWrapper>

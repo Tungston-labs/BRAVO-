@@ -136,10 +136,12 @@ export const Description = styled.p`
   font-family: "Open Sans", sans-serif;
   color: #052A57;
   transition: color 0.3s ease;
+  text-align: left; 
 
   @media (max-width: 768px) {
     font-size: 14px;
     line-height: 1.4;
+    text-align: left; 
   }
 `;
 

@@ -116,6 +116,7 @@ export const Name = styled.h3`
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   margin: 6px 0 6px;
+ 
 `;
 
 export const Quote = styled.div`
@@ -130,6 +131,7 @@ export const Text = styled.p`
   line-height: 1.6;
   margin: 0;
   opacity: 0.95;
+  text-align: center; 
 `;
 
 /* ✅ New Arrow Buttons */
@@ -166,3 +168,5 @@ export const ArrowRight = styled.button`
     color: #CE1126;
   }
 `;
+
+
