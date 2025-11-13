@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Swal from "sweetalert2"; // ✅ SweetAlert2 import
+import Swal from "sweetalert2"; 
 import {
   SectionContainer,
   ContentWrapper,
@@ -22,7 +22,7 @@ const ContactSection = () => {
     message: "",
   });
 
-  const [loading, setLoading] = useState(false); // ✅ loading state
+  const [loading, setLoading] = useState(false); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,7 +34,7 @@ const ContactSection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // show loader
+    setLoading(true); 
 
     try {
       const response = await fetch("http://localhost:5000/api/contact", {
@@ -116,14 +116,7 @@ const ContactSection = () => {
             required
             autoComplete="off"
           />
-          <Input
-            type="text"
-            name="company"
-            placeholder="Company:"
-            value={formData.company}
-            onChange={handleChange}
-            autoComplete="off"
-          />
+  
           <Input
             type="email"
             name="email"
@@ -151,7 +144,6 @@ const ContactSection = () => {
             autoComplete="off"
           />
 
-          {/* ✅ Button with loader */}
           <Button type="submit" disabled={loading}>
             {loading ? "Sending..." : "Submit"}
           </Button>

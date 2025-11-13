@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-// Wrapper with white background
 export const NavWrapper = styled.div`
   background-color: #ffffff; /* Page background white */
   padding: 1rem;
@@ -8,7 +7,6 @@ export const NavWrapper = styled.div`
   justify-content: center;
 `;
 
-// Dark navy box inside the white wrapper
 export const NavBox = styled.nav`
   background-color: #052a57; /* dark navy */
   border-radius: 8px;        /* rounded corners */
@@ -24,7 +22,7 @@ export const NavContent = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* ✅ pushes logo left, hamburger right */
+  justify-content: space-between; 
   width: 100%;
 `;
 
@@ -81,7 +79,6 @@ export const EnquiryButton = styled.button`
   }
 `;
 
-// Hamburger Icon (only visible on mobile)
 export const MobileMenuIcon = styled.div`
   font-size: 1.8rem;
   color: #fff;
@@ -93,7 +90,6 @@ export const MobileMenuIcon = styled.div`
   }
 `;
 
-// Dropdown Menu for mobile
 export const MobileMenu = styled.div`
   display: flex;
   flex-direction: column;

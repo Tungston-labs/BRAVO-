@@ -9,7 +9,6 @@ import {
   ItemText,
 } from "./WhyFrench.styles";
 
-// ✅ Import images properly
 import GraduateIcon from "../assets/graduate.svg";
 import JobsIcon from "../assets/jobs.svg";
 import CommunicationIcon from "../assets/communication.svg";

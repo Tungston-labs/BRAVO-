@@ -22,7 +22,7 @@ function App() {
       <HeaderSection />
       <ScrollingBanner />
 
-      {/* Add IDs for scrolling targets */}
+     
       <section id="why-french">
         <WhyFrench />
       </section>

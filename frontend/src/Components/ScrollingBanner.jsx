@@ -16,7 +16,6 @@ const ScrollingBanner = () => {
                 <StarIcon><MdStars /></StarIcon>
             </BannerContent>
 
-            {/* Duplicate for seamless loop */}
             <BannerContent>
                 <BannerItem>Join Bravo Education and Excel in French Fluency</BannerItem>
                 <StarIcon><MdStars /></StarIcon>

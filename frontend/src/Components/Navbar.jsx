@@ -9,7 +9,7 @@ import {
   EnquiryButton,
 } from "./Navbar.styles";
 
-import Logo from "../assets/logo.svg"; // <-- your logo svg
+import Logo from "../assets/logo.svg"; 
 
 const Navbar = () => {
   return (

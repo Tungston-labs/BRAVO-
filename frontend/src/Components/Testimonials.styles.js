@@ -134,7 +134,6 @@ export const Text = styled.p`
   text-align: center; 
 `;
 
-/* ✅ New Arrow Buttons */
 export const ArrowLeft = styled.button`
   position: absolute;
   top: 50%;

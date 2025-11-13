@@ -18,7 +18,6 @@ import {
 
 import { TbArrowBigLeftLinesFilled, TbArrowBigRightLinesFilled } from "react-icons/tb";
 
-// ✅ Import images once, then reuse
 import profile1 from "../assets/profile1.png";
 import profile2 from "../assets/profile2.png";
 import profile3 from "../assets/profile3.png";
@@ -138,7 +137,6 @@ const Testimonials = () => {
           helped them take the next step toward their dreams.
         </SubHeading>
 
-        {/* ✅ Left Arrow */}
         <ArrowLeft onClick={() => setCenterIndex((i) => mod(i - 1, total))}>
           <TbArrowBigLeftLinesFilled size={44} />
         </ArrowLeft>
@@ -174,7 +172,6 @@ const Testimonials = () => {
           })}
         </Rail>
 
-        {/* ✅ Right Arrow */}
         <ArrowRight onClick={() => setCenterIndex((i) => mod(i + 1, total))}>
           <TbArrowBigRightLinesFilled size={44} />
         </ArrowRight>
