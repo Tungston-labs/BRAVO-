@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios"; 
 import Swal from "sweetalert2"; 
 import {
   SectionContainer,
@@ -34,25 +35,19 @@ const ContactSection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); 
-
+    setLoading(true);
+  
     try {
-      const response = await fetch("http://localhost:5000/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
-
-      if (response.ok) {
+      const response = await axios.post("http://localhost:5000/api/contact", formData);
+  
+      if (response.status === 200) {
         Swal.fire({
           icon: "success",
-          title: "Message Sent 🎉",
+          title: "Message Sent",
           text: "We’ll get back to you shortly!",
-          confirmButtonColor: "#0a1a3b",
+          confirmButtonColor: "#002654",
         });
-
+  
         setFormData({
           firstName: "",
           lastName: "",
@@ -65,20 +60,20 @@ const ContactSection = () => {
         Swal.fire({
           icon: "error",
           title: "Oops!",
-          text: result.error || "Failed to send email. Try again.",
-          confirmButtonColor: "#d33",
+          text: "Failed to send email. Try again.",
+          confirmButtonColor: "#002654",
         });
       }
     } catch (err) {
       console.error("Error:", err);
       Swal.fire({
         icon: "warning",
-        title: "Something went wrong ⚠️",
-        text: "Please try again later.",
-        confirmButtonColor: "#f39c12",
+        title: "Something went wrong",
+        text: err.response?.data?.error || "Please try again later.",
+        confirmButtonColor: "#002654",
       });
     } finally {
-      setLoading(false); // hide loader
+      setLoading(false); 
     }
   };
 

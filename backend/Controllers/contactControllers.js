@@ -3,7 +3,7 @@ const transporter = require("../Config/mailConfig");
 exports.sendContactEmail = async (req, res) => {
   console.log("📩 Incoming body:", req.body);
 
-  const { firstName, lastName, company, email, size, source, message } = req.body;
+  const { firstName, lastName, email, source, message } = req.body;
 
   if (!firstName || !lastName || !email || !message) {
     return res.status(400).json({ error: "Missing required fields" });
@@ -16,9 +16,7 @@ exports.sendContactEmail = async (req, res) => {
     html: `
       <h3>New Enquiry Received:</h3>
       <p><strong>Name:</strong> ${firstName} ${lastName}</p>
-      <p><strong>Company:</strong> ${company}</p>
       <p><strong>Email:</strong> ${email}</p>
-    //   <p><strong>Company Size:</strong> ${size}</p>
       <p><strong>Heard about us via:</strong> ${source}</p>
       <p><strong>Message:</strong><br>${message}</p>
     `,
