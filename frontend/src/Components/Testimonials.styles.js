@@ -57,6 +57,7 @@ export const ReviewCard = styled.div`
     color 260ms ease;
   cursor: pointer;
   min-height: 340px;
+  
 
   ${(p) =>
     p.active &&

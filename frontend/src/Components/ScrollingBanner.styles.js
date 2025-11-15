@@ -17,7 +17,7 @@ export const BannerContent = styled.div`
   display: flex;
   align-items: center;
   padding: 10px 0;
-  animation: ${scroll} 8s linear infinite;
+  animation: ${scroll} 30s linear infinite;
 `;
 
 export const BannerItem = styled.span`
