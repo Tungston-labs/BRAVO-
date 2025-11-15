@@ -15,7 +15,7 @@ export const Background = styled.div`
   background-image: url(${(props) => props.bg});
   background-size: cover;
   background-position: center;
-  opacity: 1; /* faint background */
+  opacity: 1;
   z-index: 0;
 `;
 
@@ -46,40 +46,36 @@ export const LogoImg = styled.img`
   height: 400;
 `;
 
-export const BrandName = styled.h2`
-  font-size: 4px;
-  font-weight: 700;
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  color: green;
-`;
-
-export const BrandText = styled.p`
-  font-size: 14px;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  color: #ff0000;
-  letter-spacing: 1px;
-`;
-
 export const RightSection = styled.div`
   display: flex;
   flex-direction: column;
   gap: 25px;
+
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;  
+    margin-left: -8px;            
+  }
+
+  .social {
+    font-size: 30px;
+    color:#052A57;
+    cursor: pointer;
+  }
 `;
+
 
 export const ContactItem = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 20px;
   color: #002654;
-   font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 
   .icon {
-    font-size: 25px;
-    color: #d90429; /* red for icons */
+    font-size: 20px;
+    color: #d90429;
     flex-shrink: 0;
     margin-top: 2px;
   }
@@ -89,6 +85,8 @@ export const ContactText = styled.p`
   margin: 0;
   line-height: 1.4;
   font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  
 `;
 
 export const BottomBar = styled.div`

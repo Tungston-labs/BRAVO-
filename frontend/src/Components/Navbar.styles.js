@@ -39,7 +39,7 @@ export const LogoWrapper = styled.div`
 
 export const NavLinks = styled.div`
   display: flex;
-  gap: 3rem;
+  gap: 7rem;
 
   @media (max-width: 768px) {
     display: none; /* hide links on mobile */
@@ -60,7 +60,7 @@ export const NavLink = styled.a`
 `;
 
 export const EnquiryButton = styled.button`
-  background-color: #e30613; /* bright red */
+  background-color: #e30613; 
   border: none;
   color: #fff;
   font-size: 0.95rem;
@@ -69,15 +69,19 @@ export const EnquiryButton = styled.button`
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.2s ease;
+  font-family: 'Open Sans', sans-serif;
+
+  text-decoration: none; /* removes underline even when used as <a> */
 
   &:hover {
     background-color: #c20511;
   }
 
   @media (max-width: 768px) {
-    display: none; /* hide button on mobile */
+    display: none;
   }
 `;
+
 
 export const MobileMenuIcon = styled.div`
   font-size: 1.8rem;

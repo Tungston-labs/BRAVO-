@@ -27,7 +27,7 @@ const Header = () => {
       <ContentWrapper>
         <div>
           <Title>
-            Bravo Education <br /> French Classes
+            Bravo Education <br /> French Academy
           </Title>
           <Subtitle>
             From Kindergarten to Degree – Learn French the Smart Way.

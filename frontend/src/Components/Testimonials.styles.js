@@ -71,14 +71,14 @@ export const ReviewCard = styled.div`
 
 export const ProfileContainer = styled.div`
   position: absolute;
-  top: -54px;
+  top: -50px;
   left: 50%;
   width: 86px;
   height: 86px;
   transform: translateX(-50%);
   background: #ffffff;
   border-radius: 50%;
-  padding: 10px;
+  padding: 0;
   border: 3px solid #CE1126;
 
   ${(p) =>
@@ -89,11 +89,18 @@ export const ProfileContainer = styled.div`
     `}
 `;
 
-export const ProfileImage = styled.img`
-  width: 86px;
-  height: 86px;
-  border-radius: 50%;
-  object-fit: cover;
+export const ProfileCircle = styled.div`
+  width: 100%;
+  height: 100%;
+  border-radius: 70%;
+  background: #002654;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
 `;
 
 export const Stars = styled.div`
@@ -116,7 +123,6 @@ export const Name = styled.h3`
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   margin: 6px 0 6px;
- 
 `;
 
 export const Quote = styled.div`
@@ -133,39 +139,3 @@ export const Text = styled.p`
   opacity: 0.95;
   text-align: center; 
 `;
-
-export const ArrowLeft = styled.button`
-  position: absolute;
-  top: 50%;
-  left: -70px;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #002654;
-  transition: color 0.2s;
-  z-index: 5;
-
-  &:hover {
-    color: #CE1126;
-  }
-`;
-
-export const ArrowRight = styled.button`
-  position: absolute;
-  top: 50%;
-  right: -70px;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #002654;
-  transition: color 0.2s;
-  z-index: 5;
-
-  &:hover {
-    color: #CE1126;
-  }
-`;
-
-

@@ -13,21 +13,14 @@ import {
 } from "./Footer.styles";
 
 import { GrLocation } from "react-icons/gr";
-import { BsInstagram } from "react-icons/bs";
-import { LuMail } from "react-icons/lu";
-import { FaPhone } from "react-icons/fa6";
+import { FaPhone, FaFacebookF } from "react-icons/fa6";
+import { TbBrandInstagramFilled } from "react-icons/tb";
+import { MdEmail } from "react-icons/md";
 
 import logo from "../assets/logo2.svg";
 import bgImage from "../assets/background5.png";
 
 const Footer = () => {
-  const handleCopy = (number) => {
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(number);
-      alert(`Phone number ${number} copied to clipboard!`);
-    }
-  };
-
   return (
     <FooterContainer>
       <Background bg={bgImage} />
@@ -40,6 +33,33 @@ const Footer = () => {
         </LeftSection>
 
         <RightSection>
+
+          {/* ⭐ Social Icons with Links */}
+          <div className="social-icons">
+            <FaFacebookF className="social" />
+
+            {/* Instagram Link */}
+            <a
+              href="https://www.instagram.com/bravoeducation_aluva?igsh=aW9nZ2Iydnl6cWhp"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              <TbBrandInstagramFilled className="social" />
+            </a>
+
+            {/* Email Link */}
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=Bravoeducation.aluva@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              <MdEmail className="social" />
+            </a>
+          </div>
+
+          {/* ⭐ Location */}
           <ContactItem
             as="a"
             href="https://www.google.com/maps?q=Mannathara+building,+near+Karothukuzhi+hospital,+Aluva,+Ernakulam"
@@ -54,28 +74,7 @@ const Footer = () => {
             </ContactText>
           </ContactItem>
 
-          <ContactItem
-            as="a"
-            href="https://www.instagram.com/bravoeducation_aluva?igsh=aW9nZ2Iydnl6cWhp"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
-            <BsInstagram className="icon" />
-            <ContactText>bravoeducation_aluva</ContactText>
-          </ContactItem>
-
-          <ContactItem
-            as="a"
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=Bravoeducation.aluva@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
-            <LuMail className="icon" />
-            <ContactText>Bravoeducation.aluva@gmail.com</ContactText>
-          </ContactItem>
-
+          {/* ⭐ Phone */}
           <ContactItem>
             <FaPhone className="icon" />
             <ContactText>
@@ -94,6 +93,7 @@ const Footer = () => {
               </a>
             </ContactText>
           </ContactItem>
+
         </RightSection>
       </FooterContent>
 

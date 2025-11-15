@@ -9,7 +9,7 @@ import {
   EnquiryButton,
 } from "./Navbar.styles";
 
-import Logo from "../assets/logo.svg"; 
+import Logo from "../assets/logo.svg";
 
 const Navbar = () => {
   return (
@@ -20,7 +20,6 @@ const Navbar = () => {
             <img src={Logo} alt="Bravo Education Logo" />
           </LogoWrapper>
 
-          {/* Desktop Links */}
           <NavLinks>
             <NavLink href="#why-french">Why French</NavLink>
             <NavLink href="#why-bravo">Why Bravo Education</NavLink>
@@ -30,6 +29,7 @@ const Navbar = () => {
           <EnquiryButton as="a" href="#enquiry">
             Enquiry
           </EnquiryButton>
+
         </NavContent>
       </NavBox>
     </NavWrapper>
