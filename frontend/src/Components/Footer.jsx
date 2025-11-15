@@ -98,8 +98,13 @@ const Footer = () => {
       </FooterContent>
 
       <BottomBar>
-        © Copyright 2024, Designed by{" "}
-        <span className="highlight">Tungston Labs.</span>
+        © Copyright 2025, Designed by{" "}
+        <span className="highlight"><a
+                href="https://tungstonlabs.com/"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                Tungston Labs.
+              </a></span>
       </BottomBar>
     </FooterContainer>
   );

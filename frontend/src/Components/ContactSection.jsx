@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios"; 
-import Swal from "sweetalert2"; 
+import Swal from "sweetalert2";
 import {
   SectionContainer,
   ContentWrapper,
@@ -23,7 +22,7 @@ const ContactSection = () => {
     message: "",
   });
 
-  const [loading, setLoading] = useState(false); 
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -33,49 +32,60 @@ const ContactSection = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-  
-    try {
-      const response = await axios.post("http://localhost:5000/api/contact", formData);
-  
-      if (response.status === 200) {
-        Swal.fire({
-          icon: "success",
-          title: "Message Sent",
-          text: "We’ll get back to you shortly!",
-          confirmButtonColor: "#002654",
-        });
-  
-        setFormData({
-          firstName: "",
-          lastName: "",
-          company: "",
-          email: "",
-          source: "",
-          message: "",
-        });
-      } else {
-        Swal.fire({
-          icon: "error",
-          title: "Oops!",
-          text: "Failed to send email. Try again.",
-          confirmButtonColor: "#002654",
-        });
-      }
-    } catch (err) {
-      console.error("Error:", err);
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
+
+  try {
+    const formDataToSend = new FormData();
+    formDataToSend.append("name", formData.firstName + " " + formData.lastName);
+    formDataToSend.append("email", formData.email);
+    formDataToSend.append("message", formData.message + "\nSource: " + formData.source);
+
+    const response = await fetch("/sendmail.php", {
+      method: "POST",
+      body: formDataToSend,
+    });
+
+    const result = await response.text();
+
+    if (result === "success") {
       Swal.fire({
-        icon: "warning",
-        title: "Something went wrong",
-        text: err.response?.data?.error || "Please try again later.",
-        confirmButtonColor: "#002654",
+        icon: "success",
+        title: "Message Sent ",
+        text: "We’ll get back to you shortly!",
+        confirmButtonColor: "#0a1a3b",
       });
-    } finally {
-      setLoading(false); 
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        company: "",
+        email: "",
+        source: "",
+        message: "",
+      });
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops!",
+        text: "Failed to send email. Try again.",
+        confirmButtonColor: "#d33",
+      });
     }
-  };
+  } catch (err) {
+    console.error(err);
+    Swal.fire({
+      icon: "warning",
+      title: "Something went wrong ",
+      text: "Please try again later.",
+      confirmButtonColor: "#f39c12",
+    });
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   return (
     <SectionContainer>
@@ -111,7 +121,7 @@ const ContactSection = () => {
             required
             autoComplete="off"
           />
-  
+
           <Input
             type="email"
             name="email"
