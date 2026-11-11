@@ -14,7 +14,6 @@ import {
   Text,
 } from "./Testimonials.styles";
 
-
 const testimonialsData = [
   { id: 1, name: "Thoufeeq Haneefa", review: "I had an excellent experience with BRAVO EDUCATION. The personal attention given to each student is commendable. The quality of courses offered is top-notch and the faculty members are experts in their respective fields. I would highly recommend BRAVO EDUCATION to anyone looking for coaching services." },
   { id: 2, name: "Abdul Ahad", review: "Bravo Education is an excellent coaching center that offers high specialization and a relevant curriculum for competitive exams. The center also provides extracurricular activities to ensure overall development. With their top-notch facilities and experienced faculty, Bravo Education is the perfect choice for students aiming for success." },

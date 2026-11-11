@@ -64,8 +64,6 @@ export const RightSection = styled.div`
     cursor: pointer;
   }
 `;
-
-
 export const ContactItem = styled.div`
   display: flex;
   align-items: flex-start;

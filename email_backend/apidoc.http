@@ -1,0 +1,13 @@
+### Contact Email API
+
+POST http://127.0.0.1:8000/api/contact/
+Content-Type: application/json
+
+{
+    "firstName": "dummy",
+    "lastName": "dummy",
+    "company": "dummy test",
+    "email": "test@gmail.com",
+    "source": "Google",
+    "message": "this email is for test purpose from the software team"
+}

@@ -34,7 +34,6 @@ const Footer = () => {
 
         <RightSection>
 
-          {/* ⭐ Social Icons with Links */}
           <div className="social-icons">
             <FaFacebookF className="social" />
 
@@ -59,7 +58,6 @@ const Footer = () => {
             </a>
           </div>
 
-          {/* ⭐ Location */}
           <ContactItem
             as="a"
             href="https://www.google.com/maps?q=Mannathara+building,+near+Karothukuzhi+hospital,+Aluva,+Ernakulam"
@@ -74,7 +72,6 @@ const Footer = () => {
             </ContactText>
           </ContactItem>
 
-          {/* ⭐ Phone */}
           <ContactItem>
             <FaPhone className="icon" />
             <ContactText>
@@ -98,7 +95,7 @@ const Footer = () => {
       </FooterContent>
 
       <BottomBar>
-        © Copyright 2024, Designed by{" "}
+        © Copyright 2025, Designed by{" "}
         <span className="highlight">Tungston Labs.</span>
       </BottomBar>
     </FooterContainer>
